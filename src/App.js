@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import SubmitRecipe from './components/SubmitRecipe';
+import BrowseRecipes from './components/BrowseRecipes';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [recipes, setRecipes] = useState([]);
+
+  const addRecipe = (recipe) => {
+    setRecipes([...recipes, recipe]);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/submit" element={<SubmitRecipe addRecipe={addRecipe} />} />
+          <Route path="/browse" element={<BrowseRecipes recipes={recipes} />} />
+        </Routes>
+      </Router>
     </div>
   );
-}
+};
 
 export default App;
