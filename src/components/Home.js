@@ -2,7 +2,7 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <div>
+    <div className='home'>
       <h1>Welcome to Recipe App</h1>
       <p>Here you can submit and browse delicious recipes!</p>
     </div>

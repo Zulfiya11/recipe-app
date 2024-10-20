@@ -14,7 +14,7 @@ const SubmitRecipe = ({ addRecipe }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className='submit-recipe' onSubmit={handleSubmit}>
       <h2>Submit a New Recipe</h2>
       <label>Recipe Name:</label>
       <input value={name} onChange={(e) => setName(e.target.value)} required />

@@ -3,7 +3,8 @@
 /* General body styling */
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
+    /* font-family: 'Arial', sans-serif; */
+    font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: #f4f4f4;
   }
   
@@ -19,7 +20,7 @@ body {
   
   /* Navbar styling */
   .navbar {
-    background-color: #333;
+    background-color: #1c19a6;
     padding: 10px 20px;
   }
   
@@ -29,7 +30,12 @@ body {
     text-decoration: none;
     font-size: 18px;
   }
-  
+  .navList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
   .navbar a:hover {
     text-decoration: underline;
   }
@@ -45,12 +51,12 @@ body {
   
   .home h1 {
     font-size: 3em;
-    color: #333;
+    color: #161f98;
   }
   
   .home p {
     font-size: 1.5em;
-    color: #666;
+    color: #6b06f0;
   }
   
   /* Submit Recipe Page */
@@ -60,6 +66,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px;
+    color: #161f98;
   }
   
   .submit-recipe input,
@@ -88,6 +95,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #161f98;
   }
   
   .browse-recipes h2 {
@@ -103,7 +111,7 @@ body {
     width: 80%;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   }
-  
+
   .recipe-card h3 {
     margin: 0 0 10px 0;
   }

@@ -8,7 +8,7 @@ const BrowseRecipes = ({ recipes }) => {
   );
 
   return (
-    <div>
+    <div className='browse-recipes'>
       <h2>Browse Recipes</h2>
       <input 
         type="text" 
